@@ -10,12 +10,12 @@
                       <img src="assets/images/myphoto.jpg" alt="">
                   </div>
                   <ul>
-                      <li><strong>Nome:</strong> Carlos Henrique Soares Pires</li>
-                      <li><strong>Nascimento:</strong> 07 Jun 1985</li>
-                      <li><strong>Localidade:</strong> Catanduva - SP</li>
-                      <li><strong>Nacionalidade:</strong> Brasileiro</li>
-                      <li><strong>Celular:</strong> (67) 98196-2036</li>
-                      <li><strong>Email:</strong> carlos.henry.sp@gmail.com</li>
+                      <li><strong>Nome:</strong> {{pessoa.nome}}</li>
+                      <li><strong>Nascimento:</strong> {{ pessoa.nascimento.getDate() }} de {{ obterMesTraduzido(pessoa.nascimento.getMonth()) }} de {{ pessoa.nascimento.getFullYear() }}</li>
+                      <li><strong>Localidade:</strong> {{pessoa.localidade}}</li>
+                      <li><strong>Nacionalidade:</strong> {{pessoa.nacionalidade}}</li>
+                      <li><strong>Celular:</strong> {{pessoa.celular}}</li>
+                      <li><strong>Email:</strong> {{pessoa.email}}</li>
                   </ul>
               </div>
           </div> <!-- col-md-4 -->
@@ -24,24 +24,17 @@
               <div class="short-info wow fadeInUp">
                   <h3>Objetivo</h3>
                   <p>
-       Colaborar em um ambiente de trabalho dinâmico, onde possa aplicar e aprimorar meus conhecimentos, com foco em metas e resultados.
-       Tenho interesse em atuar na área de Tecnologia da Informação, utilizando tanto minhas habilidades técnicas como meu entendimento dos
-       aspectos de negócio, de forma a contribuir de maneira efetiva para o sucesso da equipe e da organização.
-                  </p>
+                    {{pessoa.objetivo}}
+                   </p>
               </div>
 
               <div class="short-info wow fadeInUp">
                   <h3>O que faço?</h3>
                   <p>
-                      Consultor de Negócio/Sistemas - Operadoras de Saúde (Desenvolvedor Progress/ASP.Net/Xamarin Mobile App)
+                    {{pessoa.funcao}}
                   </p>
                   <ul class="list-check">
-                      <li>Desenvolvimento em Progress ABL</li>
-                      <li>Desenvolvimento em ASP.Net</li>
-                      <li>Desenvolvimento de Scripts em SQL</li>
-                      <li>Suporte em Sistemas TOTVS GPS</li>
-                      <li>Desenvolvimento de Programas Customizaveis TOTVS GPS</li>
-                      <li>Suporte em Processos de Operadora de Saúde</li>
+                    <li *ngFor="let tarefa of pessoa.todo">{{ tarefa.do }}</li>
                   </ul>
               </div>
 

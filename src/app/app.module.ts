@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +12,10 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { WorksComponent } from './components/works/works.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { PessoaService } from './services/Pessoa.service';
+import { PessoaController } from './controllers/PessoaController';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,10 @@ import { FooterComponent } from './shared/footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DatePipe,PessoaController,PessoaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

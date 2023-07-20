@@ -7,112 +7,26 @@
         <div class="resume">
             <ul class="timeline">
 
-                <li>
+              <li *ngFor="let escolaridade of pessoa.schooling; let i = index" [ngClass]="i % 2 === 0 ? '' : 'timeline-inverted'">
                     <div class="posted-date">
-                        <span class="month">2023*</span>
+                        <span class="month">{{escolaridade.anoFim}}</span>
                     </div><!-- /posted-date -->
 
                     <div class="timeline-panel wow fadeInUp">
                         <div class="timeline-content">
                             <div class="timeline-heading">
-                                <h3>Pós-graduação em Ciência de Dados e Big Data</h3>
-                                <span>Faculdade UNIASP</span>
+                                <h3>{{escolaridade.curso}}</h3>
+                                <span>{{escolaridade.instituicao}}</span>
                             </div><!-- /timeline-heading -->
 
                             <div class="timeline-body">
                                 <p>
-                                    Cursando Primeiro Semestre, Conclusão em Dezembro de 2023
+                                  {{escolaridade.status}}, {{escolaridade.conclusao}}
                                 </p>
                             </div><!-- /timeline-body -->
                         </div> <!-- /timeline-content -->
                     </div> <!-- /timeline-panel -->
                 </li>
-
- <li class="timeline-inverted">
-                    <div class="posted-date">
-                        <span class="month">2023*</span>
-                    </div><!-- /posted-date -->
-
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>Pós-graduação em LGPD, Privacidade e Proteção de Dados</h3>
-                                <span>Faculdade UNIASP</span>
-                            </div><!-- /timeline-heading -->
-
-                            <div class="timeline-body">
-                                <p>
-                                    Cursando Primeiro Semestre, Conclusão em Dezembro de 2023
-                                </p>
-                            </div><!-- /timeline-body -->
-                        </div> <!-- /timeline-content -->
-                    </div> <!-- /timeline-panel -->
-                </li>
-
- <li >
-                    <div class="posted-date">
-                        <span class="month">2023*</span>
-                    </div><!-- /posted-date -->
-
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>MBA em Gestão de Tecnologia da Informação</h3>
-                                <span>Faculdade Alphaville</span>
-                            </div><!-- /timeline-heading -->
-
-                            <div class="timeline-body">
-                                <p>
-                                    Cursando Primeiro Semestre, Conclusão em Dezembro de 2023
-                                </p>
-                            </div><!-- /timeline-body -->
-                        </div> <!-- /timeline-content -->
-                    </div> <!-- /timeline-panel -->
-                </li>
-
-
- <li class="timeline-inverted">
-                    <div class="posted-date">
-                        <span class="month">2023*</span>
-                    </div><!-- /posted-date -->
-
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>Graduação em Processos Gerenciais</h3>
-                                <span>UCA - Faculdade Católica Paulista</span>
-                            </div><!-- /timeline-heading -->
-
-                            <div class="timeline-body">
-                                <p>
-                                    Cursando Primeiro Semestre, Conclusão em Dezembro de 2023
-                                </p>
-                            </div><!-- /timeline-body -->
-                        </div> <!-- /timeline-content -->
-                    </div> <!-- /timeline-panel -->
-                </li>
-
-                <li>
-                    <div class="posted-date">
-                        <span class="month">2020-2022</span>
-                    </div><!-- /posted-date -->
-
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>Graduação em Análise e Desenvolvimento de Sistemas</h3>
-                                <span>UCA - Faculdade Católica Paulista</span>
-                            </div><!-- /timeline-heading -->
-
-                            <div class="timeline-body">
-                                <p>
-                                    Conclusão em Dezembro de 2022
-                                </p>
-                            </div><!-- /timeline-body -->
-                        </div> <!-- /timeline-content -->
-                    </div> <!-- /timeline-panel -->
-                </li>
-
 
             </ul>
         </div>

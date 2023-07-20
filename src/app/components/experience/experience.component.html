@@ -7,36 +7,35 @@
         <div class="resume">
             <ul class="timeline">
 
-  <li>
+              <li *ngFor="let experiencia of pessoa.experience; let i = index" [ngClass]="i % 2 === 0 ? '' : 'timeline-inverted'">
+
                     <div class="posted-date">
-                        <span class="month">2022 - 2023</span>
+                        <span class="month">{{experiencia.dtIni.getFullYear()}} - {{experiencia.dtFim.getFullYear()}}</span>
                     </div><!-- /posted-date -->
 
                     <div class="timeline-panel wow fadeInUp">
                         <div class="timeline-content">
                             <div class="timeline-heading">
-                                <h3>Consultor de Negócio/Sistemas Operadoras de Saúde | Desenvolvedor Progress/ASP.Net/Xamarin Mobile App</h3>
-                                <span>PJ - Carlos Henrique Soares Pires - ME</span>
+                                <h3>{{experiencia.cargo}}</h3>
+                                <span>{{experiencia.empresa}}</span>
                             </div><!-- /timeline-heading -->
 
                             <div class="timeline-body">
                                 <p>
-                                  Atuei prestando consultoria técnica, de desenvolvimento/inovação e de negócio para operadoras Operadoras
-            de Saúde. A atividade abrange rotinas de elaboração de pareceres, adequação de processos sistêmicos, acompanhamento das resoluções normativas da ANS, desenvolvimento de programas customizáveis PROGRESS e WEB, e principalmente na viabilização do uso do sistema contemplando todas as necessidades da Operadora.
-            Também na elaboração de indicadores e relatórios através do Power BI para empresa
-            <a href="https://www.google.com/maps/uv?pb=!1s0x9486e9798ce55eb3%3A0x3587bdfeafbd1cfa!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPlB3y7gm0wlKF_vD5y4CjmdN_9Z0NQfxwHGnBy%3Dw426-h240-k-no!5smmath%20parafusos%20-%20Pesquisa%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipPlB3y7gm0wlKF_vD5y4CjmdN_9Z0NQfxwHGnBy&hl=pt-BR&sa=X&ved=2ahUKEwi3s5Coi_f5AhUtupUCHTLkCkcQoip6BAg6EAM">MMATH Parafusos & Fixadores e MMATH Peças Agrícolas</a>
-            .
+                                  {{experiencia.descricao}}
                                 </p>
 
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <i class="fa fa-map-marker"></i>
-                                        Catanduva - SP / Campo Grande - MS
+                                        {{experiencia.localizacao}}
                                     </div>
 
                                     <div class="col-sm-12">
                                         <i class="fa fa-calendar"></i>
-                                        12/2019 - 07/2023
+                                        {{ experiencia.dtIni | date: 'MM/yyyy' }} - {{ experiencia.dtFim | date: 'MM/yyyy' }}
+
+
                                     </div>
 
                                 </div>
@@ -48,190 +47,11 @@
                     </div><!-- /timeline-panel -->
                 </li>
 
-                <li class="timeline-inverted">
-                    <div class="posted-date">
-                        <span class="month">2018-2019</span>
-                    </div><!-- /posted-date -->
 
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>Consultor de Implantação de Sistemas</h3>
-                                <span>PJ - MV SAÚDE</span>
-                            </div><!-- /timeline-heading -->
 
-                            <div class="timeline-body">
-                                <p>
-                                    Atuei prestando consultoria técnica e de negócio para operadoras de saúde que aderem ao Sistema SOUL MV, nas áreas de Vendas/Comissionamento, Cadastro e Faturamento de Planos. A atividade contempla rotinas de elaboração de pareceres, adequação de processos sistêmicos, acompanhamento das resoluções normativas da ANS e principalmente na viabilização do uso do sistema contemplando todas as necessidades da Operadora.
-                                </p>
 
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-map-marker"></i>
-                                        Caruaru - PE / Belo Horizonte - MG / Rio Branco - AC
-                                    </div>
 
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-calendar"></i>
-                                        09/2018 - 10/2019
-                                    </div>
 
-                                </div>
-
-                            </div><!-- /timeline-body -->
-
-                        </div> <!-- /timeline-content -->
-
-                    </div><!-- /timeline-panel -->
-                </li>
-
-                <li>
-                    <div class="posted-date">
-                        <span class="month">2017-2018 </span>
-                    </div><!-- /posted-date -->
-
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>Analista de Suporte Sistemas</h3>
-                                <span>Unimed Campo Grande</span>
-                            </div><!-- /timeline-heading -->
-
-                            <div class="timeline-body">
-                                <p>
-                                    Atuei prestando suporte aos sistemas Gestão de Planos - GPS TOTVS, EMS5, EMS2 e Datasul Planning, também desenvolvia scripts em Progress 4gl, VBA e SQL. Participava de implementações referente a inovações sistêmicas aplicadas ao negócio. O principal foco nesse período era viabilizar soluções e prestar suporte referente a parte da Gestão da Operadora, desde a parte assistencial do negócio (Guias, execuções, contas médicas, rede credenciada) até a parte de controladoria (Contábil, Planejamento Orçamentário, Finanças, Tesouraria e etc.). Atuei diretamente nos projetos de atendimento e viabilização das responsabilidades ficais e regulatórias da operadora (DMED, DIRF, SPEED ECD e ECF, IN32, SIB, tributação entre outras).
-                                </p>
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-map-marker"></i>
-                                        Campo Grande - MS
-                                    </div>
-
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-calendar"></i>
-                                        09/2017 - 09/2018
-                                    </div>
-
-                                </div>
-
-                            </div><!-- /timeline-body -->
-
-                        </div> <!-- /timeline-content -->
-
-                    </div><!-- /timeline-panel -->
-                </li>
-
-                <li class="timeline-inverted">
-                    <div class="posted-date">
-                        <span class="month">2015-2017</span>
-                    </div><!-- /posted-date -->
-
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>Analista de Auditoria Interna</h3>
-                                <span>Unimed Campo Grande</span>
-                            </div><!-- /timeline-heading -->
-
-                            <div class="timeline-body">
-                                <p>
-                                    Atuei prestando consultoria técnica, de desenvolvimento/inovação e de negócio para operadoras de saúde que aderem ao Sistema GPS TOTVS. A atividade contempla rotinas de elaboração de pareceres, adequação de processos sistêmicos, acompanhamento das resoluções normativas da ANS, desenvolvimento de programas customizáveis PROGRESS e WEB, e principalmente na viabilização do uso do sistema contemplando todas as necessidades da Operadora.
-                                </p>
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-map-marker"></i>
-                                        Campo Grande - MS
-                                    </div>
-
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-calendar"></i>
-                                        09/2015 – 08/2017
-                                    </div>
-
-                                </div>
-
-                            </div><!-- /timeline-body -->
-
-                        </div> <!-- /timeline-content -->
-
-                    </div><!-- /timeline-panel -->
-                </li>
-
-                <li>
-                    <div class="posted-date">
-                        <span class="month">2013-2015 </span>
-                    </div><!-- /posted-date -->
-
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>Analista de Suporte Sistemas</h3>
-                                <span>Unimed Campo Grande</span>
-                            </div><!-- /timeline-heading -->
-
-                            <div class="timeline-body">
-                                <p>
-                                    Atuei prestando suporte aos sistemas Gestão de Planos - GPS TOTVS, EMS5, EMS2 e Datasul Planning, também desenvolvia scripts em Progress 4gl, VBA e SQL. Participava de implementações referente a inovações sistêmicas aplicadas ao negócio. O principal foco nesse período era viabilizar soluções e prestar suporte referente a parte da Gestão da Operadora, desde a parte assistencial do negócio (Guias, execuções, contas médicas, rede credenciada) até a parte de controladoria (Contábil, Planejamento Orçamentário, Finanças, Tesouraria e etc.). Atuei diretamente nos projetos de atendimento e viabilização das responsabilidades ficais e regulatórias da operadora (DMED, DIRF, SPEED ECD e ECF, IN32, SIB, tributação entre outras).
-                                </p>
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-map-marker"></i>
-                                        Campo Grande - MS
-                                    </div>
-
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-calendar"></i>
-                                        09/2013 - 09/2015
-                                    </div>
-
-                                </div>
-
-                            </div><!-- /timeline-body -->
-
-                        </div> <!-- /timeline-content -->
-
-                    </div><!-- /timeline-panel -->
-                </li>
-
-                <li class="timeline-inverted">
-                    <div class="posted-date">
-                        <span class="month">2012-2013</span>
-                    </div><!-- /posted-date -->
-
-                    <div class="timeline-panel wow fadeInUp">
-                        <div class="timeline-content">
-                            <div class="timeline-heading">
-                                <h3>Auxiliar de Atendimento</h3>
-                                <span>Unimed Campo Grande</span>
-                            </div><!-- /timeline-heading -->
-
-                            <div class="timeline-body">
-                                <p>
-                                    Atendimento ao cliente e rotinas administrativas.
-                                </p>
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-map-marker"></i>
-                                        Campo Grande - MS
-                                    </div>
-
-                                    <div class="col-sm-12">
-                                        <i class="fa fa-calendar"></i>
-                                        06/2012 - 09/2013
-                                    </div>
-
-                                </div>
-
-                            </div><!-- /timeline-body -->
-
-                        </div> <!-- /timeline-content -->
-
-                    </div><!-- /timeline-panel -->
-                </li>
 
 
             </ul>

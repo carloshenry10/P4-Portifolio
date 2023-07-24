@@ -1,0 +1,58 @@
+  <!-- TimeLine Experiência -->
+  <div class="row" id="resume">
+    <div class="col-md-12">
+        <div class="resume-title">
+
+          Experiência
+        </div>
+        <div class="resume">
+            <ul class="timeline">
+
+              <li *ngFor="let experiencia of pessoa?.experience; let i = index" [ngClass]="i % 2 === 0 ? '' : 'timeline-inverted'">
+
+                    <div class="posted-date">
+                        <span class="month">{{experiencia.dtIni}} - {{experiencia.dtFim}}</span>
+                    </div><!-- /posted-date -->
+
+                    <div class="timeline-panel wow fadeInUp">
+                        <div class="timeline-content">
+                            <div class="timeline-heading">
+                                <h3>
+                                <b>  {{experiencia.cargo}}</b>
+                                </h3>
+                                <hr>
+                                <span class="texto-14">{{experiencia.empresa}}</span>
+                            </div><!-- /timeline-heading -->
+
+                            <div class="timeline-body">
+                                <p>
+                                  {{experiencia.descricao}}
+                                </p>
+
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-12 texto-16">
+                                        <i class="fa fa-map-marker"></i>
+                                        {{experiencia.localizacao}}
+                                    </div>
+
+                                    <div class="col-sm-12 texto-16">
+                                        <i class="fa fa-calendar"></i>
+                                        {{ experiencia.dtIni  }} - {{ experiencia.dtFim  }}
+
+
+                                    </div>
+
+                                </div>
+
+                            </div><!-- /timeline-body -->
+
+                        </div> <!-- /timeline-content -->
+
+                    </div><!-- /timeline-panel -->
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div><!-- /row -->

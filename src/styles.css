@@ -1,4 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  font-family: 'Nova Fonte', sans-serif;
+body{
+  font-family: var(--bs-body-font-family);
 }
+
+h3{
+  text-transform: none !important;
+}
+
+p {
+  font-size: 16px;
+}
+
+.resume-title {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  font-size: 24px;
+  font-weight: bold; /* Adiciona o estilo negrito */
+}
+
+.texto-16{font-size: 16px;}
+.texto-14{font-size: 14px;}
+
+.section-padding {
+  padding: 40px 0 40px !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+/* Importe os estilos do Bootstrap */
+
+/* Importe os estilos do ngx-bootstrap (se necessário) */
+@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
+
+
+
+

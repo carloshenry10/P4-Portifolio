@@ -1,0 +1,68 @@
+<form [formGroup]="experienceForm">
+  <div class="d-none">
+    <label for="id">Id:</label>
+    <input type="number" id="id" formControlName="id" required>
+  </div>
+  <div class="mb-3">
+    <label for="dtIni" class="form-label">Data de Início:</label>
+    <input type="text" class="form-control" id="dtIni" formControlName="dtIni" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="dtFim" class="form-label">Data de Término:</label>
+    <input type="text" class="form-control" id="dtFim" formControlName="dtFim">
+  </div>
+
+  <div class="mb-3">
+    <label for="cargo" class="form-label">Cargo:</label>
+    <input type="text" class="form-control" id="cargo" formControlName="cargo" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="empresa" class="form-label">Empresa:</label>
+    <input type="text" class="form-control" id="empresa" formControlName="empresa" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="descricao" class="form-label">Descrição:</label>
+    <textarea class="form-control" id="descricao" formControlName="descricao"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="localizacao" class="form-label">Localização:</label>
+    <input type="text" class="form-control" id="localizacao" formControlName="localizacao">
+  </div>
+
+  <button class="btn btn-primary" (click)="addExperience()">Adicionar Experiência</button>
+</form>
+
+<hr>
+
+<h2>Experiências:</h2>
+<ul class="list-unstyled">
+  <div *ngFor="let experienceItem of pessoa?.experience; let i = index" class="mb-3">
+
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-3">
+          <div class="card-body">
+            <p class="card-text"><strong>Data de Início:</strong> {{ experienceItem.dtIni | date }}</p>
+            <p class="card-text"><strong>Data de Término:</strong> {{ experienceItem.dtFim | date }}</p>
+            <p class="card-text"><strong>Cargo:</strong> {{ experienceItem.cargo }}</p>
+            <p class="card-text"><strong>Empresa:</strong> {{ experienceItem.empresa }}</p>
+            <p class="card-text"><strong>Descrição:</strong> {{ experienceItem.descricao }}</p>
+            <p class="card-text"><strong>Localização:</strong> {{ experienceItem.localizacao }}</p>
+
+            <button type="button" class="btn btn-danger btn-lg"
+                  ngbTooltip="Remover item {{ experienceItem.cargo }}" (click)="removeExperience(i)">
+              <i class="fa fa-trash text-14"></i>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ul>

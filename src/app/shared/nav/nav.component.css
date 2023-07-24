@@ -1,0 +1,46 @@
+.nav-link{
+  color: black;
+  font-size: 18px;
+}
+
+/* nav.component.css */
+
+/* Fundo branco */
+.navbar {
+  background-color: #fff;
+  margin-bottom: 5px !important;
+}
+
+/* Cor da fonte preta */
+.navbar-dark .navbar-nav .nav-link {
+  color: #000;
+}
+
+/* Centralizar verticalmente */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-brand{
+  padding-top: 10px !important;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+
+}
+
+.navbar-nav{
+  margin: 0%;
+}
+
+.navbar-nav > li{
+  padding-left: 15px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

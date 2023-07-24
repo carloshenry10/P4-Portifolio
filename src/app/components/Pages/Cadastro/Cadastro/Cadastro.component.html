@@ -1,0 +1,57 @@
+<app-nav></app-nav>
+<div class="container mt-5">
+  <tabset>
+    <tab>
+      <ng-template tabHeading>
+        <span class="tab-heading">Dados Pessoais</span>
+      </ng-template>
+      <app-cad-about></app-cad-about>
+    </tab>
+
+    <tab>
+      <ng-template tabHeading>
+        <span class="tab-heading">Competências</span>
+      </ng-template>
+      <app-cad-to-do></app-cad-to-do>
+    </tab>
+
+    <tab>
+      <ng-template tabHeading>
+        <span class="tab-heading">Formação</span>
+      </ng-template>
+      <app-cad-schooling></app-cad-schooling>
+    </tab>
+
+    <tab>
+      <ng-template tabHeading>
+        <span class="tab-heading">Experiências</span>
+      </ng-template>
+      <app-cad-experience></app-cad-experience>
+    </tab>
+
+    <tab>
+      <ng-template tabHeading>
+        <span class="tab-heading">Certificações</span>
+      </ng-template>
+      <app-cad-certifications></app-cad-certifications>
+    </tab>
+
+    <tab>
+      <ng-template tabHeading>
+        <span class="tab-heading">Realizações/Portifólio</span>
+      </ng-template>
+      <app-cad-works></app-cad-works>
+    </tab>
+    <tab>
+      <ng-template tabHeading>
+        <div class="row">
+          <button (click)="voltarParaHome()" class="btn btn-primary btn-lg">
+            <i class="fas fa-home"></i> Voltar para Home
+          </button>
+        </div>
+      </ng-template>
+    </tab>
+  </tabset>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,101 @@
+    <div class="col-md-12 mt-4">
+        <div class="card-body">
+          <h3 class="card-title  mb-4">Dados Portfólio</h3>
+          <form [formGroup]="pessoaForm" class="custom-form">
+
+            <div class="d-none">
+              <label for="id">Id:</label>
+              <input type="text" class="form-control" id="id" formControlName="id"
+              placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" class="form-control" id="nome" formControlName="nome"
+                placeholder="Digite seu nome" required>
+              <div *ngIf="pessoaForm.get('nome')?.invalid && pessoaForm.get('nome')?.touched" class="text-danger">
+                O campo Nome é obrigatório.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" class="form-control" id="nascimento" formControlName="nascimento" required>
+                <div *ngIf="pessoaForm.get('nascimento')?.invalid && pessoaForm.get('nascimento')?.touched" class="text-danger">
+                  O campo Data de Nascimento é obrigatório.
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="localidade">Localidade:</label>
+                <input type="text" class="form-control" id="localidade" formControlName="localidade"
+                  placeholder="Digite sua localidade" required>
+                <div *ngIf="pessoaForm.get('localidade')?.invalid && pessoaForm.get('localidade')?.touched" class="text-danger">
+                  O campo Localidade é obrigatório.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="form-group col-md-2">
+                <label for="nacionalidade">Nacionalidade:</label>
+                <input type="text" class="form-control" id="nacionalidade" formControlName="nacionalidade"  placeholder="Digite sua nacionalidade" required>
+                <div *ngIf="pessoaForm.get('nacionalidade')?.invalid && pessoaForm.get('nacionalidade')?.touched" class="text-danger">
+                  O campo Nacionalidade é obrigatório.
+                </div>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="celular">Celular:</label>
+                <input type="text" class="form-control" id="celular" formControlName="celular"
+                 placeholder="Digite seu celular" required>
+                <div *ngIf="pessoaForm.get('celular')?.invalid && pessoaForm.get('celular')?.touched" class="text-danger">
+                  O campo Celular é obrigatório.
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Digite seu email"  required>
+                <div *ngIf="pessoaForm.get('email')?.invalid && pessoaForm.get('email')?.touched" class="text-danger">
+                  O campo Email é obrigatório e deve ser um email válido.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="linkedin">LinkedIn:</label>
+                <input type="text" class="form-control" id="linkedin" formControlName="linkedin"  placeholder="Digite seu LinkedIn" >
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="skype">Skype:</label>
+                <input type="text" class="form-control" id="skype" formControlName="skype"  placeholder="Digite seu Skype" >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="objetivo">Objetivo:</label>
+              <textarea class="form-control" id="objetivo" formControlName="objetivo"  placeholder="Digite seu objetivo"  required></textarea>
+              <div *ngIf="pessoaForm.get('objetivo')?.invalid && pessoaForm.get('objetivo')?.touched" class="text-danger">
+                O campo Objetivo é obrigatório.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="funcao">Função:</label>
+              <input type="text" class="form-control" id="funcao" formControlName="funcao"  placeholder="Digite sua função"  required>
+              <div *ngIf="pessoaForm.get('funcao')?.invalid && pessoaForm.get('funcao')?.touched" class="text-danger">
+                O campo Função é obrigatório.
+              </div>
+            </div>
+
+            <div class="d-grid gap-2 mt-4">
+              <button type="submit" [disabled]="pessoaForm.invalid" class="btn btn-primary btn-lg">Salvar</button>
+            </div>
+          </form>
+        </div>
+    </div>

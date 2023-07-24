@@ -1,0 +1,31 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()" class="mb-4">
+  <div class="mb-3">
+    <label for="do" class="form-label">Competências:</label>
+    <input type="text" id="do" formControlName="do" class="form-control" required>
+  </div>
+  <button type="button" class="btn btn-secondary me-2" (click)="addTodo()">Adicionar Competência</button>
+</form>
+
+<hr>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th class="text-16">Competências</th>
+      <th></th> <!-- Espaço para o botão Remover -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todoGroup of pessoa?.todo; let i = index">
+      <td class="text-16">{{ todoGroup.do }}</td>
+      <td>
+        <button type="button" class="btn btn-danger btn-lg" ngbTooltip="Remover item {{ todoGroup.do }}" (click)="removeTodo(i)">
+          <i class="fa fa-trash text-14"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+

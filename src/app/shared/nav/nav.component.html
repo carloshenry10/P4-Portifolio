@@ -1,32 +1,46 @@
+
+<!-- {{ pessoa | json }} -->
 <header class="header">
-  <nav class="navbar navbar-custom" role="navigation">
-      <div class="container">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
-          </div>
+  <nav class="navbar navbar-custom navbar-expand-lg" role="navigation">
+    <div class="container">
+      <!-- Logo e demais links da navegação -->
+      <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
 
-          <div class="collapse navbar-collapse" id="custom-collapse">
-              <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#about">Home</a></li>
-                  <li><a href="#about">Apresentação</a></li>
-                  <li><a href="#resume">Experiência</a></li>
+      <!-- Navegação -->
+      <div class="collapse navbar-collapse" id="custom-collapse">
+        <ul class="nav navbar-nav">
+          <li [ngClass]="{'active': activeSection === 'about'}" class="nav-item">
+            <a href="#about" class="nav-link">Apresentação</a>
+          </li>
+          <li [ngClass]="{'active': activeSection === 'resume'}" class="nav-item">
+            <a href="#resume" class="nav-link">Experiência</a>
+          </li>
+          <li [ngClass]="{'active': activeSection === 'formacao'}" class="nav-item">
+            <a href="#formacao" class="nav-link">Formação</a>
+          </li>
+          <li [ngClass]="{'active': activeSection === 'certificacoes'}" class="nav-item">
+            <a href="#certificacoes" class="nav-link">Certificação</a>
+          </li>
+          <li [ngClass]="{'active': activeSection === 'skills'}" class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li [ngClass]="{'active': activeSection === 'works'}" class="nav-item">
+            <a href="#works" class="nav-link">Portfólio</a>
+          </li>
+          <li [ngClass]="{'active': activeSection === 'contact'}" class="nav-item">
+            <a href="#contact" class="nav-link">Contato</a>
+          </li>
+        </ul>
 
-                  <li><a href="#formacao">Formação</a></li>
-                  <li><a href="#certificacoes">Cerficação</a></li>
+        <button type="button" class="btn btn-info text-white" routerLink="login">
+          <i class="fas fa-pencil-alt"></i> Editar
+        </button>
+
+        <!-- <button (click)="copiarJSONParaClipboard()">Copiar JSON para a Área de Transferência</button> -->
 
 
-                  <li><a href="#skills">Skills</a></li>
-                  <li><a href="#works">Portfólio</a></li>
-                  <!-- <li><a href="#blog">Blog</a></li> -->
-                  <li><a href="#contact">Contato</a></li>
-              </ul>
-          </div>
-      </div><!-- .container -->
+      </div>
+    </div>
   </nav>
-</header><!-- End Navigation -->
+</header>
+

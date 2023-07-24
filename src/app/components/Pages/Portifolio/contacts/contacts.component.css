@@ -1,0 +1,11 @@
+.row{
+  font-size: 15px !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+a:hover {
+  color: #cccccc !important;
+}

@@ -1,0 +1,28 @@
+.list-inline
+{
+  font-size: 16px;
+}
+
+
+a {
+  text-decoration: none !important;
+  color: #2f8465 !important;
+}
+
+a:hover {
+  color: #fff !important;
+}
+
+a:hover {
+  color: #fff !important;
+}
+
+a:active {
+  color: #fff;
+}
+
+a:visited {
+  color:#fff;
+}
+
+

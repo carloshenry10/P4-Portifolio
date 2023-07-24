@@ -1,0 +1,61 @@
+<section id="about" class="about-section section-padding">
+  <div class="container">
+      <h2 class="section-title wow fadeInUp">Apresentação</h2>
+
+      <div class="row" >
+
+          <div class="col-md-4 col-md-push-8">
+              <div class="biography">
+                  <div class="img-container">
+                      <img src="assets/images/FOTOcirculo.png" class="foto-nova" alt="">
+                  </div>
+                  <ul >
+                      <li><strong>Nome:</strong> {{pessoa?.nome}}</li>
+                      <li><strong>Nascimento:</strong>{{ pessoa?.nascimento }}</li>
+                      <li><strong>Localidade:</strong> {{pessoa?.localidade}}</li>
+                      <li><strong>Nacionalidade:</strong> {{pessoa?.nacionalidade}}</li>
+                      <li><strong>Celular:</strong> {{pessoa?.celular}}</li>
+                      <li><strong>Email:</strong> {{pessoa?.email}}</li>
+                  </ul>
+              </div>
+          </div> <!-- col-md-4 -->
+
+          <div class="col-md-8 col-md-pull-4">
+              <div class="short-info wow fadeInUp">
+                  <h3>Objetivo</h3>
+                  <p>
+                    {{pessoa?.objetivo}}
+                   </p>
+              </div>
+
+              <div class="short-info wow fadeInUp">
+                  <h3>O que faço?</h3>
+                  <p class="texto-grande">
+                    {{ pessoa?.funcao }}
+                  </p>
+                  <ul class="list-check" style="padding-left: 0px;">
+                    <li class="list-font" *ngFor="let tarefa of pessoa?.todo">{{ tarefa.do }}</li>
+                  </ul>
+              </div>
+
+              <div class="my-signature">
+                  <img src="assets/images/sign.png" alt="">
+              </div>
+
+              <div class="download-button">
+                <a class="btn btn-primary btn-xl" href="https://drive.google.com/file/d/1gWKEJNO6byP2weMf8c9ViuFPMM2CPCW5/view?usp=sharing" target="_blank">
+                  <i class="fa fa-download"></i> Download Currículo
+                </a>
+                <a class="btn btn-info btn-xl" style="background-color: #2f2e2e;" href="https://github.com/carloshenry10" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+
+
+
+          </div>
+
+
+      </div> <!-- /.row -->
+  </div> <!-- /.container -->
+</section><!-- End About Section -->

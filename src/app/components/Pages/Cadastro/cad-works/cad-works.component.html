@@ -1,0 +1,55 @@
+<form [formGroup]="worksForm" class="mb-4">
+
+  <div class="row">
+  <div class="col-md-6">
+    <label for="grupo" class="form-label">Grupo:</label>
+    <input type="text" id="grupo" formControlName="grupo" class="form-control" required>
+  </div>
+
+  <div class="col-md-6">
+    <label for="nome" class="form-label">Nome:</label>
+    <input type="text" id="nome" formControlName="nome" class="form-control" required>
+  </div>
+</div>
+
+  <div class="mb-3">
+    <label for="imgLink" class="form-label">Link da Imagem:</label>
+    <input type="text" id="imgLink" formControlName="imgLink" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="imgWork" class="form-label">Imagem do Trabalho:</label>
+    <input type="text" id="imgWork" formControlName="imgWork" class="form-control">
+  </div>
+
+  <button (click)="addWork()" class="btn btn-primary btn-lg">Adicionar Trabalho</button>
+</form>
+
+<hr>
+
+<h2>Trabalhos:</h2>
+<ul class="list-unstyled">
+  <li *ngFor="let work of pessoa?.works; let i = index" class="mb-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <p class="card-title"><strong> {{ work.nome }} </strong></p>
+        </div>
+        <p class="card-text"><strong>Grupo:</strong> {{ work.grupo }}</p>
+        <div class="row">
+          <div class="col-md-4">
+            <img [src]="work.imgWork" class="img-thumbnail" style="width: 200px;" />
+          </div>
+          <div class="col-md-4">
+            <img [src]="work.imgLink" class="img-thumbnail" style="width: 200px;" />
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-danger btn-lg" ngbTooltip="Remover item {{ work.nome }}" (click)="removeWork(i)">
+              <i class="fa fa-trash text-14"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

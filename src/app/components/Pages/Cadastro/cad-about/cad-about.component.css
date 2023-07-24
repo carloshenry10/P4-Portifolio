@@ -1,0 +1,38 @@
+/* Estilos para o formulário */
+form {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 18px; /* Aumente o tamanho da fonte para 18 pixels */
+}
+.form-control{
+  font-size: 16px; /* Aumente o tamanho da fonte para 18 pixels */
+}
+
+/* Estilos para os campos do formulário */
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos para as mensagens de erro */
+div.error-message {
+  color: red;
+  font-size: 14px;
+}
+

@@ -1,0 +1,23 @@
+.list-font{
+  font-size: 14px !important;
+}
+
+.foto-nova
+{
+  width: 250px;
+
+}
+
+/* Adicione essa classe no seu arquivo de estilos CSS */
+.img-container {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  height: 100%; /* Define a altura do contêiner da imagem para centralizá-la */
+}
+
+.btn-xl {
+  font-size: 20px;
+  padding: 15px 25px;
+  border-radius: 12px;
+}

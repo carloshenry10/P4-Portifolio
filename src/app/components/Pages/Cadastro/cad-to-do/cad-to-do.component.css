@@ -1,0 +1,19 @@
+form {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 18px; /* Aumente o tamanho da fonte para 18 pixels */
+}
+.form-control{
+  font-size: 16px; /* Aumente o tamanho da fonte para 18 pixels */
+}
+
+.text-16{
+  font-size: 16px; /* Aumente o tamanho da fonte para 18 pixels */
+}
+
+.text-14{
+  font-size: 14px; /* Aumente o tamanho da fonte para 18 pixels */
+}
+
